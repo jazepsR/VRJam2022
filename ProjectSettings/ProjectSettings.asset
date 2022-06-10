@@ -135,7 +135,10 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleVersion: 0.1
-  preloadedAssets: []
+  preloadedAssets:
+  - {fileID: 11400000, guid: 5f04617d3d4e8c341864788949bfb087, type: 2}
+  - {fileID: 7325190716353856023, guid: 3fd89b3686180c346b20d9b8bd6622af, type: 2}
+  - {fileID: 11400000, guid: 58b410c4115b8ab4aa6124cd0e5f7ec2, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -155,6 +158,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
+    Android: com.DefaultCompany.vrJam2022
     Standalone: com.DefaultCompany.vrJam2022
   buildNumber:
     Standalone: 0
@@ -162,7 +166,7 @@ PlayerSettings:
     tvOS: 0
   overrideDefaultApplicationIdentifier: 0
   AndroidBundleVersionCode: 1
-  AndroidMinSdkVersion: 22
+  AndroidMinSdkVersion: 23
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
   aotOptions: 
