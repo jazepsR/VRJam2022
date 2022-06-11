@@ -1,5 +1,64 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &319795136
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 319795137}
+  - component: {fileID: 319795138}
+  - component: {fileID: 319795139}
+  m_Layer: 7
+  m_Name: groundDetect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &319795137
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319795136}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3542387727291623053}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &319795138
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319795136}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.2262397, y: 2.7223961, z: 0.9031946}
+  m_Center: {x: -0.020056248, y: 0.0011950921, z: -0.4326582}
+--- !u!114 &319795139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319795136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6990b7f092608a6419b47171b0300959, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flying: 0
 --- !u!1 &2822964360270472794
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,7 +331,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &5775581979665893066
 GameObject:
   m_ObjectHideFlags: 0
@@ -684,7 +743,7 @@ GameObject:
   - component: {fileID: 7576944580466714948}
   - component: {fileID: 4774692937562421948}
   - component: {fileID: 3752654242151754070}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DroneParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -750,10 +809,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec9a32ec6656804ebd52655683648ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardSpeed: 10
-  turnSpeed: 30
-  strafeSpeed: 2
-  verticalSpeed: 10
+  forwardSpeed: 500
+  turnSpeed: 50
+  strafeSpeed: 500
+  verticalSpeed: 1000
+  groundDetect: {fileID: 319795139}
 --- !u!1 &7105757053869221049
 GameObject:
   m_ObjectHideFlags: 0
@@ -784,7 +844,8 @@ Transform:
   m_LocalPosition: {x: -0.0000000020954758, y: 0.00000005990267, z: -0.00000023841855}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 319795137}
   m_Father: {fileID: 694423254450478543}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
