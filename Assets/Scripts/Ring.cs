@@ -15,4 +15,20 @@ public class Ring : MonoBehaviour
     {
         
     }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "drone")
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    /*public void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "drone")
+        {
+            Destroy(gameObject);
+        }
+    }*/
 }
