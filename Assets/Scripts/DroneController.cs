@@ -59,7 +59,7 @@ public class DroneController : MonoBehaviour
         if (groundDetect.flying)
         {
             rb.AddRelativeForce(new Vector3(strafeInupt * strafeSpeed, verticalInput * verticalSpeed, forwardInput * forwardSpeed) * Time.fixedDeltaTime, ForceMode.Force);
-            rb.AddRelativeTorque(0, turnInput * turnSpeed * Time.fixedDeltaTime, 0, ForceMode.Force);
+            rb.AddRelativeTorque(0, -turnInput * turnSpeed * Time.fixedDeltaTime, 0, ForceMode.Force);
 
             //hover
             if(useHover && verticalInput ==0)

@@ -37,7 +37,7 @@
                     "type": "Value",
                     "id": "a4fcb375-a464-4224-b138-46490e678e0f",
                     "expectedControlType": "Axis",
-                    "processors": "AxisDeadzone(min=0.3)",
+                    "processors": "AxisDeadzone(min=0.5)",
                     "interactions": "",
                     "initialStateCheck": true
                 },
@@ -131,6 +131,17 @@
                     "name": "",
                     "id": "8a1d2b4a-e023-49ce-afaa-3adcd3975129",
                     "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7da9ba89-f8e6-49e3-9823-6640c0514ac2",
+                    "path": "<Keyboard>/enter",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

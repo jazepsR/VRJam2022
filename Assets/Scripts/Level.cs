@@ -37,7 +37,7 @@ public class Level : MonoBehaviour
     {
         for(int i = 0; i<rings.Count;i++)
         {
-            if(activeRing == i || activeRing + 1 == i)
+            if(activeRing == i)// || activeRing + 1 == i)
             {
                 rings[i].OnEnable();
             }
