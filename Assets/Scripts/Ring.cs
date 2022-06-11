@@ -25,6 +25,11 @@ public class Ring : MonoBehaviour
             Disable();
 
         }
+
+        if (finish)
+        {
+            // TODO: finish the game
+        }
     }
     public void OnEnable()
     {
