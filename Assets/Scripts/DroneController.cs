@@ -17,6 +17,9 @@ public class DroneController : MonoBehaviour
     [SerializeField] private bool useTransitionalDamping = true;
     [SerializeField] private float dampingStrengthSide;
     [SerializeField] private float dampingStrengthFwd;
+    [SerializeField] private float basePitch;
+    [SerializeField] private float pitchFactor;
+    [SerializeField] private Transform droneCam;
 
 
 
@@ -25,6 +28,7 @@ public class DroneController : MonoBehaviour
     private float turnInput;
     private float strafeInupt;
     private float verticalInput;
+    private AudioSource source;
     public GroundDetect groundDetect;
 
     private Vector3 startPos;
@@ -35,6 +39,7 @@ public class DroneController : MonoBehaviour
     private void Awake()
     {
         rb = GetComponentInChildren<Rigidbody>();
+        source = GetComponentInChildren<AudioSource>();
         startPos = transform.position;
         startRot = transform.rotation;
     }
@@ -92,6 +97,8 @@ public class DroneController : MonoBehaviour
             rb.AddRelativeForce(new Vector3(0, verticalInput * verticalSpeed, 0) * Time.fixedDeltaTime, ForceMode.Force);
         }
 
+        source.pitch = basePitch+ ( Mathf.Abs(verticalInput) + Mathf.Max(Mathf.Abs(strafeInupt) + Mathf.Abs(forwardInput)))/2f*pitchFactor;
+        droneCam.transform.rotation = Quaternion.Euler(0, droneCam.rotation.eulerAngles.y, 0);
         
     }
 

@@ -43,7 +43,7 @@ public class UiControl : MonoBehaviour
         {
             currentTime += Time.deltaTime;
         }
-        timerText.text = "Time: " + (currentTime / 60).ToString("00") + ":" + (currentTime % 60).ToString("00");
+        timerText.text = "Time: " + ((int)currentTime / 60).ToString("00") + ":" + (currentTime % 60).ToString("00");
        /* if (currentTime / 60 > 0)
         {
             timerText.text = "Time: " + (currentTime / 60).ToString("00") + ":" + (currentTime % 60).ToString("00")
