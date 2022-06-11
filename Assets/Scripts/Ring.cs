@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Ring : MonoBehaviour
 {
+    public bool finish = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,11 @@ public class Ring : MonoBehaviour
         if(other.tag == "drone")
         {
             Destroy(gameObject);
+        }
+
+        if (finish)
+        {
+            // TODO: finish the game
         }
     }
 
