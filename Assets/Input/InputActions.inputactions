@@ -37,7 +37,7 @@
                     "type": "Value",
                     "id": "a4fcb375-a464-4224-b138-46490e678e0f",
                     "expectedControlType": "Axis",
-                    "processors": "",
+                    "processors": "AxisDeadzone(min=0.3)",
                     "interactions": "",
                     "initialStateCheck": true
                 },
@@ -45,6 +45,15 @@
                     "name": "Reset",
                     "type": "Button",
                     "id": "d03cb60d-b7d6-4b29-b429-005185c74cd4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Select",
+                    "type": "Button",
+                    "id": "275efd34-5b94-4366-8e32-6a08c1ce84c9",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -104,6 +113,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Reset",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "952be9ee-a823-4407-baed-de0ac4cac7e7",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Select",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 8093463744369776078}
   - component: {fileID: 8093463744369776114}
   - component: {fileID: 8093463744369776115}
+  - component: {fileID: 264922460410218778}
   m_Layer: 0
-  m_Name: particle
+  m_Name: ring
   m_TagString: ring
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -750,7 +751,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 5
+      value: 4
       mode: 0
       spread: 0
       speed:
@@ -4885,6 +4886,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d259129895fddb14faf0a98fe51b712d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: {fileID: 0}
 --- !u!65 &8093463744369776115
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4896,5 +4898,25 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.914132, y: 11.15822, z: 1.7830129}
+  m_Size: {x: 7, y: 7, z: 0.5}
   m_Center: {x: -0.41997194, y: -0.09109497, z: 0.04614541}
+--- !u!95 &264922460410218778
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8093463744369776079}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: baeec01ca9afc77498c22e67a288cebe, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

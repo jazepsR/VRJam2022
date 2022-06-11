@@ -9,6 +9,9 @@ public class DroneController : MonoBehaviour
     [SerializeField] private float turnSpeed;
     [SerializeField] private float strafeSpeed;
     [SerializeField] private float verticalSpeed;
+    [SerializeField] private float tiltAngleFwd =25f;
+    [SerializeField] private float tiltAngleStrafe = 25f;
+    [SerializeField] private float tiltSpeed = 10f;
     [SerializeField] private bool useHover= true;
     [SerializeField] private float hoverStrength;
     [SerializeField] private bool useTransitionalDamping = true;
@@ -25,6 +28,7 @@ public class DroneController : MonoBehaviour
     public GroundDetect groundDetect;
 
     private Vector3 startPos;
+    private Quaternion startRot;
 
     private Rigidbody rb;
 
@@ -32,6 +36,7 @@ public class DroneController : MonoBehaviour
     {
         rb = GetComponentInChildren<Rigidbody>();
         startPos = transform.position;
+        startRot = transform.rotation;
     }
 
     // Start is called before the first frame update
@@ -76,9 +81,11 @@ public class DroneController : MonoBehaviour
                     rb.AddForce(0, 0, -correction * Time.fixedDeltaTime, ForceMode.VelocityChange);
 
                 }
-
-
             }
+            //rotation correction
+            Quaternion target = Quaternion.Lerp(rb.rotation, Quaternion.Euler(tiltAngleFwd * forwardInput, rb.rotation.eulerAngles.y, -tiltAngleStrafe * strafeInupt), tiltSpeed*Time.fixedDeltaTime);
+            rb.MoveRotation(target);
+
         }
         else
         {
@@ -101,7 +108,7 @@ public class DroneController : MonoBehaviour
     {
         rb.transform.position = startPos;
         rb.velocity = Vector3.zero;
-        rb.rotation = Quaternion.identity;
+        rb.rotation = startRot;
     }
 
     public void OnStrafe(InputValue value)
