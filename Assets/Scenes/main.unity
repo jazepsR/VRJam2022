@@ -2091,7 +2091,7 @@ PrefabInstance:
     - target: {fileID: 3752654242151754070, guid: 7e0654e2ea73fe04ebb33ade1a73f1c1,
         type: 3}
       propertyPath: basePitch
-      value: 0.65
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 3752654242151754070, guid: 7e0654e2ea73fe04ebb33ade1a73f1c1,
         type: 3}
@@ -2101,7 +2101,7 @@ PrefabInstance:
     - target: {fileID: 3752654242151754070, guid: 7e0654e2ea73fe04ebb33ade1a73f1c1,
         type: 3}
       propertyPath: pitchFactor
-      value: 0.4
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 3752654242151754070, guid: 7e0654e2ea73fe04ebb33ade1a73f1c1,
         type: 3}
@@ -3693,7 +3693,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1dee7a209f231764e955e3cb671e28e4, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 254f4dfadad24ba4282c3e035fcbd363, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
